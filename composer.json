@@ -17,10 +17,10 @@
         "opentok/opentok": "2.2.x"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Tomcorbett\\OpentokLaravel\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev-l5-adaptation"
 }
  
