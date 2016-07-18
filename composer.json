@@ -18,9 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Tomcorbett\\OpentokLaravel\\": "src/"
+            "Tomcorbett\\OpentokLaravel\\": "src/TomCorbett/OpentokLaravel/"
         }
     },
     "minimum-stability": "dev-l5-adaptation"
 }
- 
