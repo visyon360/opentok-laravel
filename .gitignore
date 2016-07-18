@@ -6,3 +6,5 @@ composer.lock  # Should consider removing this one, however
 
 # Composer
 composer.phar
+/.project
+/.buildpath

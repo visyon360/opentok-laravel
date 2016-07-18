@@ -20,7 +20,7 @@ class OpentokLaravelServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('tomcorbett/opentok-laravel');
+		
 	}
 
 	/**
@@ -29,9 +29,8 @@ class OpentokLaravelServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register()
-	{
-        $app = $this->app;
-        $app->bind('OpentokApi', function() {
+	{        
+        $this->app->bind('OpentokApi', function() {
             
             $api_key    = Config::get('opentok-laravel::api_key');
             $api_secret = Config::get('opentok-laravel::api_secret');
