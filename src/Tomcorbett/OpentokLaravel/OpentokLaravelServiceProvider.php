@@ -20,9 +20,7 @@ class OpentokLaravelServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-	    $this->publishes([
-	        __DIR__.'/../../config/config.php' => config_path('opentok-laravel.php')
-	    ], 'config');
+	    
 	}
 
 	/**
@@ -32,6 +30,14 @@ class OpentokLaravelServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{        
+	    $config = realpath(__DIR__.'/../config/config.php');
+	    
+	    $this->mergeConfigFrom($config, 'opentok.laravel');
+	    
+	    $this->publishes([
+	        __DIR__.'/../../config/config.php' => config_path('opentok-laravel.php')
+	    ], 'config');
+	    
         $this->app->bind('OpentokApi', function() {
             
             $api_key    = Config::get('opentok-laravel::api_key');
