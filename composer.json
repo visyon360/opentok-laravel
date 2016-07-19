@@ -27,7 +27,7 @@
             "php artisan vendor:publish --tag=config"
         ],
         "post-update-cmd": [
-            "php artisan vendor:publish --tag=confg"
+            "php artisan vendor:publish --tag=config"
         ]        
     }
 }
