@@ -21,5 +21,13 @@
             "Tomcorbett\\OpentokLaravel\\": "src/Tomcorbett/OpentokLaravel/"
         }
     },
-    "minimum-stability": "dev-l5-adaptation"
+    "minimum-stability": "dev-l5-adaptation",
+    "scripts" : {
+        "post-install-cmd": [
+            "php artisan vendor:publish --tag=config"
+        ],
+        "post-update-cmd": [
+            "php artisan vendor:publish --tag=confg"
+        ]        
+    }
 }
