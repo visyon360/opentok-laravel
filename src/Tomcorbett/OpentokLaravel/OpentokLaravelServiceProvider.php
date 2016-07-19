@@ -35,12 +35,12 @@ class OpentokLaravelServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register()
-	{   	    
+	{   	
         $this->app->bind('OpentokApi', function() {
             
-            $api_key    = Config::get('opentok-laravel::api_key');
-            $api_secret = Config::get('opentok-laravel::api_secret');
-        
+            $api_key    = config('opentok-laravel.api_key');
+            $api_secret = config('opentok-laravel.api_secret');
+                    
             // create new instance of SDK
             $openTokApi = new OpenTok($api_key, $api_secret);
 
