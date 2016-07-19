@@ -1,19 +1,40 @@
 ## OpenTok for Laravel
 --------------------------------------
 
-This is a laravel4 wrapper library forthe [OpenTok](http://tokbox.com/opentok/) SDK. OpenTok is a product by TokBox which utilizes WebRTC to enable peer to peer video, audio and messaging.
+This is a laravel5 wrapper library for the [OpenTok](http://tokbox.com/opentok/) SDK. OpenTok is a product by TokBox which utilizes WebRTC to enable peer to peer video, audio and messaging.
 
 Please note: this repository is in *NO WAY* associated with TokBox.
 
-## Composer Require
-Currently only dev-master but is only a wrapper really...
+## Important NOTE
+This is an *extremely unstable* version, I'm just poking around and learning how does Composer integrate with Laravel in order to integrate this into laravel5.
 
-    "tomcorbett/opentok-laravel": "dev-master"
+## Known Issues:
+ * Uninstalling via ```composer remove``` gives an error.
+ * No ```post-install-cmd``` commands in order to autopublish config file on install seems to work :(
+
+## Composer Require
+From command line in your project's root:
+
+    composer require "tomcorbett/opentok-laravel": "dev-l5-adaptation"
+    
+##Adding the Provider and the facade in your app.php
+
+    'providers' => [
+        // ... Whatever you have before
+        
+        Tomcorbett\OpentokLaravel\OpentokLaravelServiceProvider::class,
+     ]
+     
+     'aliases' => [
+        // ... Whatever you have before
+        
+        'OpentokApi' => Tomcorbett\OpentokLaravel\Facades\OpentokApi::class
+     ]
 
 ### Publishing The Configuration
 Publish the configurations for this package in order to change them to your liking:
 
-    php artisan config:publish tomcorbett/opentok-laravel
+    php artisan vendor:publish
 
 ### Setting up your Configuration
 Get your api\_key and api\_secret from your OpenTok account and replace the placeholders in your config file:
