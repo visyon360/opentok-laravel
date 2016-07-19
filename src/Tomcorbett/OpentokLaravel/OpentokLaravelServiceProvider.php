@@ -30,12 +30,12 @@ class OpentokLaravelServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{        
-	    $config = realpath(__DIR__.'/../config/config.php');
+	    $config = realpath(__DIR__.'/../../config/config.php');
 	    
 	    $this->mergeConfigFrom($config, 'opentok.laravel');
 	    
 	    $this->publishes([
-	        __DIR__.'/../../config/config.php' => config_path('opentok-laravel.php')
+	       $config => config_path('opentok-laravel.php')
 	    ], 'config');
 	    
         $this->app->bind('OpentokApi', function() {
