@@ -14,14 +14,14 @@
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "~5.3",
-        "opentok/opentok": "dev-master"
+        "opentok/opentok": "master"
     },
     "autoload": {
         "psr-4": {
             "Tomcorbett\\OpentokLaravel\\": "src/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "scripts" : {
         "post-install-cmd": [
             "php artisan vendor:publish --tag=config"
