@@ -13,15 +13,15 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "~5.2",
-        "opentok/opentok": "2.2.x"
+        "illuminate/support": "~5.3",
+        "opentok/opentok": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Tomcorbett\\OpentokLaravel\\": "src/Tomcorbett/OpentokLaravel/"
+            "Tomcorbett\\OpentokLaravel\\": "src/"
         }
     },
-    "minimum-stability": "dev-l5-adaptation",
+    "minimum-stability": "dev",
     "scripts" : {
         "post-install-cmd": [
             "php artisan vendor:publish --tag=config"
