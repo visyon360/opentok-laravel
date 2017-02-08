@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "~5.3",
-        "opentok/opentok": "master"
+        "opentok/opentok": "2.4.x"
     },
     "autoload": {
         "psr-4": {
