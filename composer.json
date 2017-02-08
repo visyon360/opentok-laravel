@@ -21,7 +21,6 @@
             "Tomcorbett\\OpentokLaravel\\": "src/"
         }
     },
-    "minimum-stability": "dev",
     "scripts" : {
         "post-install-cmd": [
             "php artisan vendor:publish --tag=config"
